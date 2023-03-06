@@ -31,22 +31,3 @@ Function.prototype.myBind = function (context) {
 	Fn.prototype = new fNOP()
 	return Fn
 }
-
-function testFn() {
-	this.value = 2
-	console.log(this.name, this.value)
-}
-
-testFn.prototype.friend = "kevin"
-
-const obj = {
-	name: "la"
-}
-
-const bindFn = testFn.myBind(obj)
-
-const foo = new bindFn("x")
-
-bindFn(2)
-
-console.log(foo.value)
