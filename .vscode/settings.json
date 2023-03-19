@@ -1,3 +1,16 @@
 {
-	"cSpell.words": ["concat", "lprim", "lref", "Otaku", "proto", "rprim", "rref", "typeof"]
+	"cSpell.words": [
+		"concat",
+		"keydown",
+		"keyup",
+		"lprim",
+		"lref",
+		"mousedown",
+		"mousemove",
+		"Otaku",
+		"proto",
+		"rprim",
+		"rref",
+		"typeof"
+	]
 }
