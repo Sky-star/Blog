@@ -1,6 +1,7 @@
 {
 	"cSpell.words": [
 		"concat",
+		"dimm",
 		"keydown",
 		"keyup",
 		"lprim",
@@ -11,6 +12,7 @@
 		"proto",
 		"rprim",
 		"rref",
-		"typeof"
+		"typeof",
+		"vitepress"
 	]
 }
