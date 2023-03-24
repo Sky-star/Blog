@@ -1,5 +1,9 @@
 import { defineConfig } from 'vitepress';
-import paths from './files';
+import { files } from './files';
+
+
+console.log(JSON.stringify(files, null, 2));
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "老白的学习笔记",
@@ -9,10 +13,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '笔记/JavaScript专题系列/节流', activeMatch: '笔记/JavaScript专题系列' }
     ],
 
-    sidebar: paths,
+    sidebar: files,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Sky-star/Interview' },
