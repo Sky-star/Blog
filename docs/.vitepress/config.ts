@@ -1,7 +1,5 @@
 import { defineConfig } from 'vitepress';
-import { files } from './files';
-
-console.log(files)
+import paths from './files';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "老白的学习笔记",
@@ -14,7 +12,7 @@ export default defineConfig({
       { text: 'Examples', link: '/markdown-examples' }
     ],
 
-    sidebar: [],
+    sidebar: paths,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Sky-star/Interview' },
