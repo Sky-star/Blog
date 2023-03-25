@@ -38,6 +38,10 @@ export type SidebarItem = {
 function parseDirectory(directory: string, result: Sidebar = {}) {
 	// 读取目录中的所有文件和文件夹
 	const files = fs.readdirSync(directory);
+	// 对读取的文件进行排序
+	sortFiles(files)
+	console.log(files);
+
 
 	// 遍历所有文件和子目录
 	for (let i = 0; i < files.length; i++) {
@@ -80,6 +84,15 @@ function replaceRootDir(path: string) {
 	}
 }
 
+function sortFiles(files: string[]) {
+
+	files.sort(function (a: string, b: string) {
+		const aIndex = parseInt(a.split('.')[0]);
+		const bIndex = parseInt(b.split('.')[0]);
+		return aIndex - bIndex;
+	});
+}
+
 
 // 解析当前目录中的所有.md文件
-export const files = parseDirectory('./docs/笔记');
+export const files = parseDirectory('./docs/笔记')
