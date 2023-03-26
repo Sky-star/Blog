@@ -40,8 +40,6 @@ function parseDirectory(directory: string, result: Sidebar = {}) {
 	const files = fs.readdirSync(directory);
 	// 对读取的文件进行排序
 	sortFiles(files)
-	console.log(files);
-
 
 	// 遍历所有文件和子目录
 	for (let i = 0; i < files.length; i++) {
