@@ -1,13 +1,13 @@
 import fs from "fs"
 import path from 'path';
 
-export type Sidebar = SidebarItem[] | SidebarMulti
+type Sidebar = SidebarItem[] | SidebarMulti
 
-export interface SidebarMulti {
+interface SidebarMulti {
 	[path: string]: SidebarItem[]
 }
 
-export type SidebarItem = {
+type SidebarItem = {
 	/**
 	 * The text label of the item.
 	 */
@@ -72,7 +72,8 @@ function parseDirectory(directory: string, result: Sidebar = {}) {
 }
 
 function replaceRootDir(path: string) {
-	const regex = /\\{1}(.+?)(?:\.md)?$/g
+	// 匹配docs之后的文件路径
+	const regex = /[\\\/]{1}(.+?)(?:\.md)?$/g
 	const match = regex.exec(path)
 
 	if (match && match[1]) {
@@ -83,7 +84,6 @@ function replaceRootDir(path: string) {
 }
 
 function sortFiles(files: string[]) {
-
 	files.sort(function (a: string, b: string) {
 		const aIndex = parseInt(a.split('.')[0]);
 		const bIndex = parseInt(b.split('.')[0]);
