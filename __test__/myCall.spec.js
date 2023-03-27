@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { call2 } from "./myCall"
+import { call2 } from "../JS/myCall"
 
 describe("myCall函数测试", () => {
 	it("改变this指向", () => {

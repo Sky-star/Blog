@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { myBind } from "./myBind"
+import { myBind } from "../JS/myBind"
 
 describe("Bind", () => {
 	it("绑定函数作为普通函数使用时", () => {

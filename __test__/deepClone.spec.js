@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { deepClone } from "./deepClone"
+import { deepClone } from "../JS/deepClone"
 
 describe("deepClone", () => {
 	it("普通对象的克隆", () => {
