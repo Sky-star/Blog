@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 import { files } from './files';
 
 
-console.log(JSON.stringify(files, null, 2));
+// console.log(JSON.stringify(files, null, 2));
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
