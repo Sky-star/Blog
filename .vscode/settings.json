@@ -3,6 +3,7 @@
 		"arity",
 		"concat",
 		"dimm",
+		"hasher",
 		"keydown",
 		"keyup",
 		"lprim",
