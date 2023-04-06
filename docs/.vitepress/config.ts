@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { files } from './files';
+import markdownItKatex from '@iktakahiro/markdown-it-katex';
 // console.log(JSON.stringify(files, null, 2));
 
 // https://vitepress.dev/reference/site-config
@@ -19,5 +20,11 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/Sky-star/Interview' },
       { icon: 'github', link: 'https://github.com/mqyqingfeng/Blog' }
     ]
+  },
+  markdown: {
+    config: (md) => {
+      md.use(markdownItKatex)
+    }
   }
+
 })
