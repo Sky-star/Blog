@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { files } from './files';
-import markdownItKatex from '@iktakahiro/markdown-it-katex';
+import { mathjax3, customElements } from './mathjax3';
 // console.log(JSON.stringify(files, null, 2));
 
 // https://vitepress.dev/reference/site-config
@@ -23,7 +23,14 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      md.use(markdownItKatex)
+      md.use(mathjax3)
+    }
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag),
+      }
     }
   }
 

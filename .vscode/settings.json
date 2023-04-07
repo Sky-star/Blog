@@ -18,6 +18,7 @@
 		"rprim",
 		"rref",
 		"typeof",
-		"vitepress"
+		"vitepress",
+		"mathjax3"
 	]
 }
