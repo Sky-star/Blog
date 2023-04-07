@@ -6,10 +6,14 @@
 		"hasher",
 		"keydown",
 		"keyup",
+		"logn",
 		"lprim",
 		"lref",
+		"mathjax3",
 		"mousedown",
 		"mousemove",
+		"nlog",
+		"nlogn",
 		"Otaku",
 		"pointfree",
 		"proto",
@@ -18,7 +22,6 @@
 		"rprim",
 		"rref",
 		"typeof",
-		"vitepress",
-		"mathjax3"
+		"vitepress"
 	]
 }
