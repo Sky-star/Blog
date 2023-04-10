@@ -40,6 +40,18 @@ type SidebarItem = {
 // excludeFile is an array of strings that lists files to be excluded.
 const excludeFile: string[] = ['index.md', 'assets']
 
+/**
+
+解析目录结构，生成侧边栏对象
+
+@param {string} directory - 要解析的目录路径
+
+@param {Sidebar} result - 解析结果对象，用于存储生成的侧边栏结构，默认为空对象
+
+@param {Array} exclude - 需要排除的文件名数组，默认为 excludeFile 数组
+
+@returns {Sidebar} - 返回生成的侧边栏对象
+*/
 function parseDirectory(directory: string, result: Sidebar = {}, exclude = excludeFile) {
 	// 读取目录中的所有文件和文件夹
 	const files = fs.readdirSync(directory).filter((name) => {
