@@ -144,6 +144,6 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 # vitepress
-.vitepress/dist
-.vitepress/cache
+dist
+cache
 .DS_Store
