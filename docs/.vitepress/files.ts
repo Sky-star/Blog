@@ -1,6 +1,9 @@
 import fs from "fs"
 import path from 'path';
 
+// 笔记所存的名称
+const srcName = 'blog'
+
 type Sidebar = SidebarItem[] | SidebarMulti
 
 interface SidebarMulti {
@@ -34,10 +37,15 @@ type SidebarItem = {
 }
 
 
+// excludeFile is an array of strings that lists files to be excluded.
+const excludeFile: string[] = ['index.md', 'assets']
 
-function parseDirectory(directory: string, result: Sidebar = {}) {
+function parseDirectory(directory: string, result: Sidebar = {}, exclude = excludeFile) {
 	// 读取目录中的所有文件和文件夹
-	const files = fs.readdirSync(directory);
+	const files = fs.readdirSync(directory).filter((name) => {
+		return exclude.indexOf(name) === -1
+	});
+
 	// 对读取的文件进行排序
 	sortFiles(files)
 
@@ -72,8 +80,9 @@ function parseDirectory(directory: string, result: Sidebar = {}) {
 }
 
 function replaceRootDir(path: string) {
-	// 匹配docs之后的文件路径
-	const regex = /[\\\/]{1}(.+?)(?:\.md)?$/g
+	// 匹配docs/blog之后的文件路径
+	const regex = new RegExp('[\\\\/]{1}' + srcName + '(.+?)(?:\\.md)?$', 'g');
+
 	const match = regex.exec(path)
 
 	if (match && match[1]) {
@@ -93,4 +102,4 @@ function sortFiles(files: string[]) {
 
 
 // 解析当前目录中的所有.md文件
-export const files = parseDirectory('./docs/笔记')
+export const files = parseDirectory('./docs/' + srcName)
