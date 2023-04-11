@@ -16,6 +16,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
     ],
     sidebar: files,
+    outline: 'deep',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Sky-star/Interview' },
       { icon: 'github', link: 'https://github.com/mqyqingfeng/Blog' }
