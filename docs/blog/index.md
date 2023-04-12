@@ -15,6 +15,7 @@ features:
     link: /JavaScript专题系列/1.跟着underscore学防抖
   - title: ES6系列
     details: 不知道写啥，等我看完再总结
+    link: /ES6系列/1.let和const.md
   # - title: 键盘侠养成笔记
   #   details: Vim基础用法，包含日常使用的插件和环境配置等(TODO)
   # - title: 前端单元测试笔记
