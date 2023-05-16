@@ -1,6 +1,7 @@
 {
 	"cSpell.words": [
 		"arity",
+		"cnpm",
 		"concat",
 		"dimm",
 		"funcs",
@@ -23,6 +24,7 @@
 		"readdir",
 		"rprim",
 		"rref",
+		"seajs",
 		"typeof",
 		"vitepress"
 	]
