@@ -22,7 +22,7 @@ features:
   #   details: 前端单元测试的理论和实践课程的整理(TODO)
   - title: Vue系列
     details: 实现一个mini-vue(基于Vue3)
-    link: /Vue系列/1.源码结构的介绍.md
+    link: /Vue系列/1.响应式系统-副作用函数.md
   # - title: VitePress搭建博客系列
   #   details: 博客仓库的整个搭建过程
 ---
