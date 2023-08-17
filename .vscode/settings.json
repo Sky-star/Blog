@@ -29,6 +29,8 @@
 		"seajs",
 		"typeof",
 		"unshift",
-		"vitepress"
+		"vdom",
+		"vitepress",
+		"vnode"
 	]
 }
