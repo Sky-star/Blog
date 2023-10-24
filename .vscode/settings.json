@@ -27,6 +27,7 @@
 		"rprim",
 		"rref",
 		"seajs",
+		"transitionend",
 		"typeof",
 		"unshift",
 		"vdom",
