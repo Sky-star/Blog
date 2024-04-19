@@ -11,7 +11,6 @@ export default defineConfig({
   srcDir: './blog',
   lastUpdated: true,
   ignoreDeadLinks: true,
-  base: '/repo/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
